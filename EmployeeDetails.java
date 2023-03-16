@@ -1,22 +1,21 @@
 package com.BridgelabsW2;
 
-public class ContactDetails {
-    private String name,age,phoneNumber,city,state,department;
-    public void ContactDetails(String name, String age,String phoneNumber,String city,String state,String department){
-        this.name=name;
+public class EmployeeDetails {
+    private String c,empName,age,phoneNumber,city,state,department;
+    public void EmployeeDetails(String empName, String age, String phoneNumber, String city, String state, String department){
+        this.empName=empName;
         this.age=age;
         this.phoneNumber=phoneNumber;
         this.city=city;
         this.state=state;
         this.department=department;
     }
-
-    public String getName() {
-        return name;
+    public String getEmpName() {
+        return empName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setEmpName(String empName) {
+        this.empName = empName;
     }
 
     public String getAge() {

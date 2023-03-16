@@ -4,12 +4,12 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class CompaniesDetails {
-    ArrayList<ContactDetails> contactDetails=new ArrayList<>();
+    ArrayList<EmployeeDetails> employeeDetails =new ArrayList<>();
     Scanner sc =new Scanner(System.in);
-    public ContactDetails addDetails(){
-        ContactDetails person =new ContactDetails();
+    public EmployeeDetails addDetails(){
+        EmployeeDetails person =new EmployeeDetails();
         System.out.println("Enter Name of the employee: ");
-        person.setName(sc.nextLine());
+        person.setEmpName(sc.nextLine());
         System.out.println("Enter the age of employee: ");
         person.setAge(sc.nextLine());
         System.out.println("Enter the Phone Number of the person: ");
@@ -24,8 +24,8 @@ public class CompaniesDetails {
         return person;
     }
     public void addContacts(){
-       ContactDetails addContacts =addDetails();
-       contactDetails.add(addContacts);
+       EmployeeDetails addContacts =addDetails();
+       employeeDetails.add(addContacts);
         System.out.println(addContacts);
         System.out.println("Added successfully");
     }
@@ -35,12 +35,12 @@ public class CompaniesDetails {
         System.out.println("Enter the no of the person: ");
         int name =sc.nextInt();
         System.out.println("For Update: ");
-        System.out.println("\n a)Name \n b)Age \n c)PhoneNumber \n d)City \n e) State \n f) Department");
+        System.out.println("\n a)EmpName \n b)Age \n c)PhoneNumber \n d)City \n e) State \n f) Department");
         char update =sc.next().charAt(0);
         switch (update){
             case 'a':{
                 String updated = sc.nextLine();
-                String Name =updated;
+                String EmpName =updated;
                 System.out.println("Name is updated");
                 break;
         }
@@ -85,7 +85,7 @@ public class CompaniesDetails {
             }
     }
     void displayContact(){
-        for (ContactDetails person : contactDetails){
+        for (EmployeeDetails person : employeeDetails){
             System.out.println(person);
         }
     }
