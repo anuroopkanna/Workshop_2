@@ -4,33 +4,41 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
-class  Hashmap1 {
+
 public class EmployeeCompanies {
     public static void main(String[] args) {
-        HashMap<CompaniesDetails, EmployeeDetails> hm =new HashMap<>();
-        CompaniesDetails Tesla =new CompaniesDetails("lohith","25","9376723823","hyd","ts","developer");
-        CompaniesDetails Tata =new CompaniesDetails("Shyam","26","9376563823","mumbai","mh","developer");
-        CompaniesDetails Infosys = new CompaniesDetails("divya","26","937672345","chaennai","tl","programer");
-        CompaniesDetails Genpact =new CompaniesDetails("Kavya","25","9376723823","hyd","ts","DA");
-        hm.put(1,Tesla);
-        hm.put(2,Tata);
-        hm.put(3,Infosys);
-        hm.put(4,Genpact);
-        System.out.println("iterating hashmap");
-        for (Map.Entry m: Map.of().entrySet());{
-            int key=entry.getKey();
-            CompaniesDetails b=entry.getValue();
-            System.out.println(key+" Details:");
-            System.out.println(b.employeeDetails);
+        HashMap<String, companiesDetails> hashMap =new HashMap();
+        companiesDetails kia =new companiesDetails();
+        companiesDetails tata =new companiesDetails();
+        companiesDetails infosys = new companiesDetails();
+        companiesDetails genpact =new companiesDetails();
+        hashMap.put("a",kia);
+        hashMap.put("b",tata);
+        hashMap.put("c",infosys);
+        hashMap.put("d",genpact);
+        System.out.println("iteration starts");
+        for (Map.Entry value:hashMap.entrySet())
+        {
+            System.out.println();
+            System.out.println(value.getKey()+" "+value.getValue());
         }
-       // System.out.println("**Welcome to the Details of Multiple companies**");
-        CompaniesDetails companiesDetails = new CompaniesDetails();
+        /*CompaniesDetails kiaCompany =  hashMap.get("a");
+        System.out.println(kiaCompany.addDetails());
+        System.out.println(kia+" "+kiaCompany);
+        CompaniesDetails tataCompany =  hashMap.get("b");
+        System.out.println(tataCompany);
+        CompaniesDetails infosysIt =  hashMap.get("c");
+        System.out.println(infosysIt);
+        CompaniesDetails genpactTechnologies =  hashMap.get("d");
+        System.out.println(genpactTechnologies);*/
+       //System.out.println("**Welcome to the Details of Multiple companies**");
+        companiesDetails companiesDetails = new companiesDetails();
         Scanner sc = new Scanner(System.in);
-        boolean flag = true;
-        while (flag) {
-            System.out.println("1)Add concats: \n 2) edit: \n 3) displaycontact: \n 4)Exit");
-            int option = sc.nextInt();
-            switch (option) {
+        boolean option = true;
+        while (option) {
+            System.out.println("1) Add concats: \n 2) Edit: \n 3) Displaycontact: \n 4) Exit");
+            int choose = sc.nextInt();
+            switch (choose) {
                 case 1: {
                     companiesDetails.addContacts();
                     break;
@@ -44,7 +52,7 @@ public class EmployeeCompanies {
                     break;
                 }
                 case 4: {
-                    flag = false;
+                    option = false;
                     break;
                 }
                 default: {
@@ -54,6 +62,6 @@ public class EmployeeCompanies {
             }
             System.out.println("exit");
         }
+
     }
-}
 }

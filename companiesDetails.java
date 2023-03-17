@@ -3,7 +3,7 @@ package com.BridgelabsW2;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class CompaniesDetails {
+public class companiesDetails {
     ArrayList<EmployeeDetails> employeeDetails =new ArrayList<>();
     Scanner sc =new Scanner(System.in);
     public EmployeeDetails addDetails(){
